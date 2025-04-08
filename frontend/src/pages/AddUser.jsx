@@ -9,10 +9,10 @@ function AddUser() {
   const handleAddUser = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/users/", newUser) // Certifique-se de que o URL termina com "/"
+      .post("http://localhost:8000/users/", newUser)
       .then(() => {
         alert("Usuário adicionado com sucesso!");
-        navigate("/"); // Redireciona para a página inicial
+        navigate("/");
       })
       .catch((error) => {
         console.error("Error adding user:", error);
@@ -21,10 +21,11 @@ function AddUser() {
   };
 
   return (
-    <div>
-      <h2>Adicionar Novo Usuário</h2>
-      <form onSubmit={handleAddUser}>
+    <div className="add-user-container">
+      <h2 className="add-user-title">Adicionar Novo Usuário</h2>
+      <form className="add-user-form" onSubmit={handleAddUser}>
         <input
+          className="add-user-input"
           type="text"
           placeholder="Nome"
           value={newUser.name}
@@ -32,6 +33,7 @@ function AddUser() {
           required
         />
         <input
+          className="add-user-input"
           type="email"
           placeholder="Email"
           value={newUser.email}
@@ -39,13 +41,14 @@ function AddUser() {
           required
         />
         <input
+          className="add-user-input"
           type="password"
           placeholder="Senha"
           value={newUser.password}
           onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
           required
         />
-        <button type="submit">Adicionar Usuário</button>
+        <button className="add-user-button" type="submit">Adicionar Usuário</button>
       </form>
     </div>
   );

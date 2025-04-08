@@ -28,6 +28,21 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(90deg, #64ffb7, #151a7d);
+  background-size: 400% 400%;
+  animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1 {
@@ -65,4 +80,22 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.title{
+  position: absolute;
+  top: 60px;
+  margin-left: 40px;
+  font-size: 2.5em;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+  background: linear-gradient(90deg, #646cff, #151a7d);
+  border-radius: 20px;
+}
+
+.btn-delete {
+  background-color: red;
+}
+.add-user-button {
+  background-color: #646cff;
+  color: white;
 }

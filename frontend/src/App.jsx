@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Gerenciamento de Usuários</h1>
+        <h1 className="title">edição de Usuários</h1>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add-user" element={<AddUser />} />
