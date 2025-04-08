@@ -7,7 +7,7 @@ A aplicação full-stack CRUD é um projeto que combina um frontend construído 
 A estrutura do projeto é organizada da seguinte forma:
 - `frontend/`: Contém o código do frontend.
   - `package.json`: Contém as dependências e scripts para o frontend.
-- `backend/`: (detalhes não disponíveis)
+- `backend/`: usando uvicorn e pymysql para estabelecer a ligação com o database
 
 ## Frontend
 O frontend é uma aplicação React configurada com Vite para um desenvolvimento rápido e eficiente. Aqui estão alguns detalhes importantes:
